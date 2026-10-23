@@ -1,0 +1,29 @@
+{
+  "name": "Kitto — Anti-Slop QR & Precision Utilities",
+  "short_name": "Kitto",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#FAF8F5",
+  "theme_color": "#E14D2A",
+  "description": "Generator QR kustom vektor murni, kalkulator entropi sandi, dan 25+ alat produktivitas presisi.",
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "sizes": "192x192 512x512 any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "QR Studio",
+      "url": "/",
+      "description": "Buat kode QR kustom"
+    },
+    {
+      "name": "Password Generator",
+      "url": "/",
+      "description": "Generate password kuat berentropi tinggi"
+    }
+  ]
+}

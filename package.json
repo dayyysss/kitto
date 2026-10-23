@@ -1,0 +1,14 @@
+{
+  "name": "qr-app",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "dev": "bun --cwd apps/web dev",
+    "dev:api": "bun --cwd apps/api dev",
+    "build": "bun --cwd apps/web build"
+  },
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ]
+}

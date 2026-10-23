@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="apple-touch-icon" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kitto — Anti-Slop QR & Precision Utilities</title>
+    <meta name="description" content="Kitto adalah generator QR kustom vektor murni, kalkulator entropi sandi, dan 25+ perangkat utilitas presisi. 100% diproses di browser tanpa watermark, bebas pelacakan, dan offline-ready." />
+    <meta name="keywords" content="kitto, qr code generator, qr vector, svg qr code, password generator, shannon entropy, uuid v7, pph 21, invoice generator, pdf merger, screenshot beautifier, dev tools" />
+    <link rel="canonical" href="https://kitto.dev/" />
+
+    <!-- PWA Manifest & Theme -->
+    <link rel="manifest" href="/manifest.json" />
+    <meta name="theme-color" content="#E14D2A" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://kitto.dev/" />
+    <meta property="og:title" content="Kitto — Anti-Slop QR & Precision Utilities" />
+    <meta property="og:description" content="Generator QR kustom vektor murni, kalkulator entropi sandi, dan 25+ perangkat utilitas web. 100% diproses di browsermu." />
+    <meta property="og:image" content="https://kitto.dev/favicon.svg" />
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Kitto — Anti-Slop QR & Precision Utilities" />
+    <meta name="twitter:description" content="Generator QR kustom vektor murni, kalkulator entropi sandi, dan 25+ perangkat utilitas web." />
+
+    <!-- Structured Data (JSON-LD) for Search Engines -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "WebApplication",
+        "name": "Kitto",
+        "url": "https://kitto.dev",
+        "description": "Generator QR kustom vektor murni, kalkulator entropi sandi, dan 25+ perangkat utilitas web presisi berstandar anti-slop.",
+        "applicationCategory": "UtilitiesApplication",
+        "operatingSystem": "All",
+        "browserRequirements": "Requires JavaScript. Requires HTML5.",
+        "offers": {
+          "@type": "Offer",
+          "price": "0",
+          "priceCurrency": "USD"
+        }
+      }
+    </script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://api.fontshare.com/v2/css?f[]=satoshi@400,500,600,700,800,900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    <script>
+      (function() {
+        var t = localStorage.getItem('qt_theme');
+        if (t === 'dark' || (!t && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+          document.documentElement.classList.add('dark');
+        } else {
+          document.documentElement.classList.remove('dark');
+        }
+      })();
+    </script>
+    <!-- Google Identity Services (GIS) Sign-In SDK -->
+    <script src="https://accounts.google.com/gsi/client" async defer></script>
+  </head>
+  <body class="bg-[#FAF8F5] dark:bg-[#121316] text-[#1C1917] dark:text-[#F5F4F0] antialiased selection:bg-[#E14D2A] selection:text-white">
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>

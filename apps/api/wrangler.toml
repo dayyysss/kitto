@@ -1,0 +1,7 @@
+name = "kitto-api"
+main = "index.ts"
+compatibility_date = "2026-10-16"
+compatibility_flags = ["nodejs_compat"]
+
+[vars]
+PORT = "3000"

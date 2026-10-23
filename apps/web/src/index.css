@@ -1,0 +1,136 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@layer base {
+  :root {
+    --canvas: #FAF8F5;
+    --surface: #FFFFFF;
+    --surface-secondary: #F3EFEA;
+    --border: #EAE5DC;
+    --border-hover: #DAD3C5;
+    --text-primary: #1C1917;
+    --text-secondary: #57534E;
+    --text-muted: #78716C;
+    --primary: #E14D2A;
+    --primary-hover: #C83B1B;
+    --accent: #E14D2A;
+    --hanko-glow: rgba(225, 77, 42, 0.15);
+  }
+
+  .dark {
+    --canvas: #121316;
+    --surface: #1A1B20;
+    --surface-secondary: #22242B;
+    --border: #272A33;
+    --border-hover: #373C48;
+    --text-primary: #F5F4F0;
+    --text-secondary: #A8A29E;
+    --text-muted: #78716C;
+    --primary: #E14D2A;
+    --primary-hover: #F06543;
+    --accent: #E14D2A;
+    --hanko-glow: rgba(225, 77, 42, 0.22);
+  }
+
+  html {
+    background-color: var(--canvas);
+    color: var(--text-primary);
+  }
+
+  body {
+    font-family: 'Satoshi', 'Poppins', system-ui, -apple-system, sans-serif;
+    background-color: var(--canvas);
+    color: var(--text-primary);
+    min-height: 100vh;
+    margin: 0;
+    font-size: 16px;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  .font-serif-accent {
+    font-family: 'Instrument Serif', Georgia, serif;
+  }
+
+  .font-mono-code {
+    font-family: 'JetBrains Mono', ui-monospace, monospace;
+  }
+}
+
+/* Custom scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(225, 77, 42, 0.25);
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(225, 77, 42, 0.45);
+}
+
+/* Magic UI Keyframes */
+@keyframes shine {
+  0% {
+    background-position: 0% 0%;
+  }
+  50% {
+    background-position: 100% 100%;
+  }
+  to {
+    background-position: 0% 0%;
+  }
+}
+
+.animate-shine {
+  animation: shine var(--shine-pulse-duration, 14s) infinite linear;
+}
+
+@keyframes border-beam {
+  100% {
+    offset-distance: 100%;
+  }
+}
+
+.animate-border-beam {
+  animation: border-beam calc(var(--duration) * 1s) infinite linear;
+}
+
+@keyframes marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+.marquee-track {
+  animation: marquee 48s linear infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .marquee-track {
+    animation: none;
+  }
+}
+
+/* Mobile usability: prevent iOS focus zoom and improve tap response */
+@media (max-width: 639px) {
+  input,
+  select,
+  textarea {
+    font-size: 16px !important;
+  }
+}
+
+button,
+a {
+  touch-action: manipulation;
+}

@@ -1,0 +1,5 @@
+User-agent: *
+Disallow: /atelier-ops
+Allow: /
+
+Sitemap: https://kitto.dev/sitemap.xml
